@@ -15,8 +15,8 @@ class AddActivity : AppCompatActivity() {
         db = DatabaseHandler(this)
 
         btn_add.setOnClickListener {
-            val student = Student(null, et_nama.text.toString(), et_email.text.toString())
-            val rowInserted = db.insertStudent(student)
+            val inventory = Inventory(null, et_nama.text.toString(), et_jumlah.text.toString().toInt())
+            val rowInserted = db.insertInventory(inventory)
 
             if(rowInserted!! > 0){
                 Toast.makeText(this, "Data sukses disimpan", Toast.LENGTH_SHORT).show()

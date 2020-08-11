@@ -48,22 +48,22 @@
             android:layout_marginStart="8dp"/>
 
         <TextView
-            android:id="@+id/tv_email"
+            android:id="@+id/tv_jumlah"
             android:layout_width="128dp"
-            android:text="Email :"
+            android:text="Jumlah :"
             android:textSize="32sp"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/tv_nama"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp"/>
         <TextView
-            android:id="@+id/tv_isi_email"
+            android:id="@+id/tv_isi_jumlah"
             android:layout_width="wrap_content"
-            android:text="Email"
+            android:text="Jumlah"
             android:textSize="32sp"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/tv_nama"
-            app:layout_constraintStart_toEndOf="@id/tv_email"
+            app:layout_constraintStart_toEndOf="@id/tv_jumlah"
             android:layout_marginStart="8dp"/>
 
         <ImageView

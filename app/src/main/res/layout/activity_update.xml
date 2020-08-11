@@ -7,14 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".AddActivity">
     <EditText
-        android:hint="Nama Student"
+        android:hint="Nama Inventory"
         android:id="@+id/et_nama_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
-        android:hint="Email Student"
-        android:id="@+id/et_email_update"
+        android:hint="Jumlah"
+        android:id="@+id/et_jumlahl_update"
         android:layout_width="match_parent"
+        android:inputType="number"
         android:layout_height="wrap_content" />
 
     <Button

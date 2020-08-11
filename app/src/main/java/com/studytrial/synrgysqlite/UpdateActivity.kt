@@ -12,20 +12,20 @@ class UpdateActivity : AppCompatActivity() {
 
         val dbHandler = DatabaseHandler(this)
 
-        val student = intent.getParcelableExtra<Student>("student")
+        val inventory = intent.getParcelableExtra<Inventory>("inventory")
 
-        supportActionBar?.title = "Ubah data ${student?.name}"
+        supportActionBar?.title = "Ubah data ${inventory?.name}"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        et_nama_update.setText(student?.name)
-        et_email_update.setText(student?.email)
+        et_nama_update.setText(inventory?.name)
+        et_jumlahl_update.setText(inventory!!.Jumlah)
 
         btn_save.setOnClickListener {
-            student?.name = et_nama_update.text.toString()
-            student?.email = et_email_update.text.toString()
+            inventory?.name = et_nama_update.text.toString()
+            inventory?.Jumlah = et_jumlahl_update.text.toString().toInt()
 
-            student?.let {
-                if(dbHandler.updateStudent(it) != 0){
+            inventory?.let {
+                if(dbHandler.updateInventory(it) != 0){
                     Toast.makeText(this, "Data terupdate", Toast.LENGTH_SHORT).show()
                     finish()
                 } else{
